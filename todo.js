@@ -12,14 +12,22 @@ const createTodo = () => {
 
   return fetch("http://localhost:3000", {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(todo),
   })
-    .then((res) => res.json())
+    .then((res) => res.text())
     .then((res) => console.log(res));
 };
 
 const readTodo = async () => {
-  const res = await fetch("http://localhost:3000");
+  const res = await fetch("http://localhost:3000",{
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
   const data = await res.json();
   return data;
 };
@@ -28,6 +36,9 @@ const readTodo = async () => {
 const updateTodo = (todo) => {
   return fetch("http://localhost:3000", {
     method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(todo),
   })
     .then((res) => res.text())
@@ -38,6 +49,9 @@ const updateTodo = (todo) => {
 const deleteTodo = (id) => {
   return fetch("http://localhost:3000", {
     method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(id),
   })
     .then((res) => res.text())

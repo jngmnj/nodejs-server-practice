@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-server-practice",
+  "version": "1.0.0",
+  "description": "간단한 `Node.js` 백엔드와 `Vanilla JavaScript` 프론트엔드를 사용해 **Todo List CRUD 기능**을 구현한 프로젝트입니다.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jngmnj/nodejs-server-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jngmnj/nodejs-server-practice/issues"
+  },
+  "homepage": "https://github.com/jngmnj/nodejs-server-practice#readme",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
