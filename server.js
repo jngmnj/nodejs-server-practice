@@ -27,12 +27,12 @@ app.options("/", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  console.log(req.query);
   return res.json(todos); // todos 배열을 JSON 형식으로 응답한다.
 });
 
 app.post("/", (req, res) => {
-  todos = [...todos, req.body]; // 수신한 데이터를 todos 배열에 추가한다.
+  console.log(req.body); // 클라이언트에서 보낸 요청 본문을 콘솔에 출력한다.
+  todos = [...todos, { id: Number(new Date()), text: req.body, done: false}]; // 수신한 데이터를 todos 배열에 추가한다.
   return res.send("등록되었습니다."); // 클라이언트에게 응답한다.
 });
 
