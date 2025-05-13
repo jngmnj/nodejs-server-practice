@@ -1,0 +1,48 @@
+.container {
+  height: 100vh;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+.container h1 {
+  text-align: center;
+  color: #333;
+}
+.input-area {
+  display: flex;
+  align-items: center;
+}
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.input-area button {
+  margin-left: 10px;
+  background-color:rgb(89, 143, 243);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+}
+#todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+#todo-list li {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+#todo-list li.done p {
+  text-decoration: line-through;
+}
+#todo-list li button {
+  margin-left: 10px;
+  cursor: pointer;
+}
+#todo-list li button.delete {
+  background-color: red;
+  color: white;
+}
